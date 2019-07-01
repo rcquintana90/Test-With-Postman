@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "faa65be6-693d-43df-bdf6-56a23cc2c9fe",
+		"name": "Test_Predictor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test Predictor Peak and Plate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e344f391-96ea-45d4-9201-1704305bafb3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "numPlaca",
+							"value": "PDF8372",
+							"type": "text"
+						},
+						{
+							"key": "fecha",
+							"value": "2019-06-25",
+							"type": "text"
+						},
+						{
+							"key": "hora",
+							"value": "09:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/prueba/view/call.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"prueba",
+						"view",
+						"call.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Predictor Peak and Plate Fail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e344f391-96ea-45d4-9201-1704305bafb3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "numPlaca",
+							"value": "PDF837",
+							"type": "text"
+						},
+						{
+							"key": "fecha",
+							"value": "2019-06-24",
+							"type": "text"
+						},
+						{
+							"key": "hora",
+							"value": "09:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/prueba/view/call.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"prueba",
+						"view",
+						"call.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Predictor Peak and Plate another message",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e344f391-96ea-45d4-9201-1704305bafb3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "numPlaca",
+							"value": "PDF8363",
+							"type": "text"
+						},
+						{
+							"key": "fecha",
+							"value": "2019-07-01",
+							"type": "text"
+						},
+						{
+							"key": "hora",
+							"value": "09:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/prueba/view/call.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"prueba",
+						"view",
+						"call.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
